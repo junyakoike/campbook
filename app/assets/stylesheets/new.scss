@@ -1,0 +1,56 @@
+.logcontainer{
+    width: 50%;
+    border: solid #0f0f0f;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #f5a597;
+    margin: 50px auto;
+}
+
+.field{
+    opacity:0.7;
+    margin: 20px;
+
+  
+  }
+  .title {
+
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    background-color: #b0baf3;
+  }
+  input[type="text"] {
+    width: 150;
+    height: 40px;
+  }
+  input[type="submit"] {
+    width: 200px;
+    font-size: 20px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+  }
+
+
+.input[type="submit"] {
+  width: 200px;
+  font-size: 20px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+
+}
+.box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 90px;
+  
+    
+}
+.all{
+  background-image: url("../assets/キャンプ２.webp");
+  background-size: cover;
+  min-height: 700px;
+  background-position: bottom;
+  position: relative;
+}

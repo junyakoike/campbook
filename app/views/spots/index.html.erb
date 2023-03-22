@@ -1,0 +1,57 @@
+<div class="container">
+
+<h3>一覧ページ</h3>
+<%= link_to "新規投稿へ", new_spot_path %>
+<h3>投稿を検索</h3>
+<%= form_tag({controller:"spots",action:"index"}, method: :get) do %>
+ <%= select_tag :search, options_for_select([["地方を選択してください",""],["東北","東北"], ["関東", "関東"], ["中部", "中部"],["近畿","近畿"], ["中国","中国"],["四国","四国"],["九州","九州"]])%>
+ <%= submit_tag '検索する'  %>
+<% end %>
+<% if @place.present? %>
+<%= @place %>
+<%end%>
+
+<%= stylesheet_link_tag 'index', :media => "all" %>
+
+<div class="spots-container">
+  <% @spots.each do |t| %>
+    <div class="spot">
+    <%= image_tag t.image_url, size: "250x200" if t.image? %>
+
+      <%= t.name%>
+      <%= t.chara %>
+      <%= t.access %>
+      <% if user_signed_in? %>
+      <% if current_user.already_liked?(t) %>
+          <%= link_to spot_like_path(id: t.id, spot_id: t.id), method: :delete do %>
+            <i class="fas fa-thumbs-up"></i></i><%= t.likes.count %>
+          <% end %>
+      <% else %>
+          <%= link_to spot_likes_path(id: t.id, spot_id: t.id), method: :post do %>
+            <i class="far fa-heart"></i><%= t.likes.count %>
+          <% end %>
+      <% end %>
+  <% else %>
+      <i class="far fa-heart"></i><%= t.likes.count %>
+  <% end %>
+
+
+
+
+      <%= link_to "詳細へ", spot_path(t.id) %> 
+      <%= button_to "削除する", spot_path(t.id), method: :delete %> 
+      <%= link_to "編集する", edit_spot_path(t.id) %>
+
+    </div>
+    <p class="time"><%= t.created_at %></p>
+    <% end %>
+</div>
+
+</div>
+  
+
+
+
+ 
+ 
+  
