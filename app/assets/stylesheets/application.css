@@ -22,14 +22,14 @@
     font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ",
       Meiryo, "ＭＳ Ｐゴシック", sans-serif;
       padding-bottom: 30px;
-      background-color: rgb(203, 235, 174);
+      background-color: #85a854;
 
   }
 
 
   header {
     opacity:0.7;
-    background-color: #082e75;
+    background-color: #000205;
     height: 80px;
     font-weight: bold;
     display: flex;
@@ -37,11 +37,11 @@
     align-items: center;
   }
   header a {
-    color: rgb(96, 60, 224); 
+    color: rgb(78, 228, 191); 
     text-decoration: none; 
   }
   header h1 {
-    color: rgb(48, 207, 167);
+    color: rgb(78, 228, 191);
     margin-left: 20px;
   }
   .header-list {
@@ -58,14 +58,16 @@
 
 
 footer {
-  opacity:0.4;
+  opacity:1.0;
   color: white;
-  height: 30px;
+  height: 35px;
   background-color: #000;
   bottom: 0;
   width: 100%;
   display: flex;
   align-items: center;
   position: fixed;
-  justify-content: flex-end;
+  justify-content: center;
+  text-align: center;
+  
 }

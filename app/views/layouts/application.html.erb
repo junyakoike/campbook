@@ -6,6 +6,8 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <script src="https://kit.fontawesome.com/fa5e7d2b10.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -13,7 +15,7 @@
   <body>
     <header>
     <%= link_to root_path do%>
-      <h1>CampBook</h1>
+      <h1>Campbook</h1>
     <%end%>
       <div class="header-list">
       <ul>
@@ -31,7 +33,7 @@
       <%= yield %>
     </main>
     <footer>
-    <p>Copyright © GeekSalon All Rights Reserved.</p>
+    <p>campbook.kj</p>
   </footer>
   </body>
 </html>
